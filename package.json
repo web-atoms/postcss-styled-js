@@ -1,0 +1,30 @@
+{
+  "name": "@web-atoms/postcss-styled-js",
+  "version": "1.0.6",
+  "description": "Compiles Styled export to CSS at compile time",
+  "homepage": "https://github.com/web-atoms/postcss-styled-js#readme",
+  "bugs": {
+    "url": "https://github.com/web-atoms/postcss-styled-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-atoms/postcss-styled-js.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "manual-test": "node --enable-source-maps ./index.js ./manual-test/body.css.js",
+    "postversion": "git push --follow-tags"
+  },
+  "dependencies": {
+    "glob": "^11.0.1",
+    "postcss": "^8.5.3",
+    "source-map": "^0.7.4",
+    "stacktrace-parser": "^0.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14"
+  }
+}

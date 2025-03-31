@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module":"CommonJS",
+        "incremental": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "removeComments": true,
+        "declaration": true,
+        "declarationMap": true,
+        "importHelpers": true,
+        "skipLibCheck": true,
+        "jsx": "react",
+        "jsxFactory": "XNode.create",
+        "lib": [
+            "ES2020",
+            "dom",
+            "ES2020.BigInt",
+            "ES2020.String",
+            "ESNext.Disposable"
+        ]
+    },
+    "include": [
+        "src/**/*"
+, "styler"    ],
+    "exclude": [
+		"node_modules",
+        "tests"
+    ]
+}
