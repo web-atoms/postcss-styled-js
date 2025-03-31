@@ -1,2 +1,2 @@
 const all = require("./dist/postcss-js");
-module.exports = all;
+module.exports = all.default;
