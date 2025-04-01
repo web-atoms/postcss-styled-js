@@ -1,5 +1,5 @@
 import path from "path";
-import valueParser from "postcss-value-parser";
+import * as valueParser from "postcss-value-parser";
 import transpileStyled from "./transpileStyled.js";
 
 const jsProcessed = Symbol("jsProcessed-1");
@@ -17,7 +17,7 @@ const postCssImportJs =(opts = {}) => {
                 }
                 rule[jsProcessed] = true;
 
-                promisesList.push((async (resolve) => {
+                promisesList.push((async () => {
 
                     const params = valueParser(rule.params).nodes;
 
@@ -41,7 +41,6 @@ const postCssImportJs =(opts = {}) => {
 
                     rule.remove();
 
-                    resolve();
                 })());
             });
 

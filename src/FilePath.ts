@@ -1,4 +1,4 @@
-import path from "path";
+import * as path from "path";
 import { fileURLToPath, pathToFileURL } from "url";
 
 export default class FilePath {
