@@ -17,7 +17,7 @@ export default async function transpileStyled({
 
     for await(const file of globIterate(targets, {
         absolute: true,
-        root: sourceFilePath.dir
+        cwd: sourceFilePath.dir
     })) {
         const nodeFilePath = new FilePath(file);
         console.log(`Compiling ${nodeFilePath.filePath}`);
