@@ -1,5 +1,5 @@
-# Styled-Compiler
-Compiles Styled export to CSS at compile time
+# PostCSS Styled JS
+Import JavaScript file which exports `styled.css`
 
 ## Why, Why, Why another tool?
 Some how CSS post processing are little complicated, and do not provide best editing experience and we cannot debug what is being generated.
