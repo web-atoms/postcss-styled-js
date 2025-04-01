@@ -20,6 +20,7 @@ export default async function transpileStyled({
         root: sourceFilePath.dir
     })) {
         const nodeFilePath = new FilePath(file);
+        console.log(`Compiling ${nodeFilePath.filePath}`);
         const fileResult = require(nodeFilePath.filePath) as SourceNode;
 
         if (!fileResult) {
