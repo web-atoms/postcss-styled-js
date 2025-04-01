@@ -20,7 +20,7 @@ export default async function transpileStyled({
         root: sourceFilePath.dir
     })) {
         const nodeFilePath = new FilePath(file);
-        const fileResult = require(nodeFilePath.fileUrl) as SourceNode;
+        const fileResult = require(nodeFilePath.filePath) as SourceNode;
 
         if (!fileResult) {
             result.warn(`JavaScript file did not return Style object` , {
