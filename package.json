@@ -1,5 +1,5 @@
 {
-  "name": "@web-atoms/postcss-styled-js",
+  "name": "postcss-styled-js",
   "version": "1.0.17",
   "description": "Compiles Styled export to CSS at compile time",
   "homepage": "https://github.com/web-atoms/postcss-styled-js#readme",
