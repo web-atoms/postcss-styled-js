@@ -9,13 +9,13 @@ Some how CSS post processing are little complicated, and do not provide best edi
 
 ## Getting Started
 ### Installation
-1. `npm install -D postcss-styled-js
-2. Add `postcss-styled-js` as a plugin
+1. `npm install -D postcss-import-styled-js
+2. Add `postcss-import-styled-js` as a plugin
 ```js
 module.exports = (ctx) => ({
     map: { ... ctx.options.map, sourcesContent: false },
     plugins: [
-        require("postcss-styled-js")(), // <-- this one
+        require("postcss-import-styled-js")(), // <-- this one
         require('postcss-preset-env')(),
         require("postcss-import")(),
         require("postcss-import-ext-glob")(),
@@ -32,6 +32,7 @@ module.exports = (ctx) => ({
 main.css
 ```css
 
+/** This will import JS files */
 @import-styled-js "./**/*.css.js";
 
 ```
@@ -40,7 +41,7 @@ main.css
 
 body.css.js
 ```js
-import styled from "postcss-styled-js";
+import styled from "postcss-import-styled-js";
 
 const animations = Object.entries({
     div: "red",
@@ -78,4 +79,4 @@ body {
 
 # What is happening?
 
-`postcss-styled-js` will compile all `.css.js` files to `.css` file and import the generated file in the target main css file.
+`postcss-import-styled-js` will compile all `.css.js` files to `.css` file and import the generated file in the target main css file.
