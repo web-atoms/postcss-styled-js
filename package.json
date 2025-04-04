@@ -1,6 +1,6 @@
 {
   "name": "postcss-import-styled-js",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Compiles Styled export to CSS at compile time",
   "keywords": [
     "postcss",
