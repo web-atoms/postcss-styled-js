@@ -29,13 +29,20 @@ const postCssImportJs =(opts = {}) => {
                             continue;
                         }
 
-                        await transpileStyled({
-                            sourceFile: rule.source.input.file,
-                            targets: param.value,
-                            AtRule,
-                            result,
-                            rule
-                        })
+                        try {
+
+                            await transpileStyled({
+                                sourceFile: rule.source.input.file,
+                                targets: param.value,
+                                AtRule,
+                                result,
+                                rule
+                            })
+                        } catch (error) {
+                            result.warn(`Compilation failed with ${error.stack ?? error}`, {
+                                node: rule
+                            });
+                        }
                         
                     }
 
