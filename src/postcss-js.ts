@@ -39,9 +39,7 @@ const postCssImportJs =(opts = {}) => {
                                 rule
                             })
                         } catch (error) {
-                            result.warn(`Compilation failed with ${error.stack ?? error}`, {
-                                node: rule
-                            });
+                            throw rule.error(`Compilation failed ${error.stack ?? error}`);
                         }
                         
                     }
